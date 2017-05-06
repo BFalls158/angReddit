@@ -17,7 +17,7 @@ angular.module('app')
 	    return promise;
 	  },
       getReddit: function () {
-	      	return reddit;
+	     return reddit;
 	    }
 	 }
 
