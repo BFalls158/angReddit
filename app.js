@@ -1,11 +1,11 @@
 angular.module('app', ['ngRoute', 'ngAnimate'])
 	.config(function ($routeProvider){
 		$routeProvider.when('/rSearch', {
-			templateUrl: 'rSearch.html',
+			templateUrl: 'views/rSearch.html',
 			controller: 'rSController'
 		})
 		.when('/rResults', {
-			templateUrl: 'rResults.html',
+			templateUrl: 'views/rResults.html',
 			controller: 'rRController'
 		})
 		.otherwise('/rSearch')
@@ -13,7 +13,7 @@ angular.module('app', ['ngRoute', 'ngAnimate'])
 	.directive('rPost', function(){
 		return {
 			restrict: 'C',
-			templateUrl: 'rDiv.html',
+			templateUrl: 'views/rDiv.html',
 			replace: false
 		}
 	});
