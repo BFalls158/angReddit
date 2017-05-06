@@ -1,0 +1,8 @@
+	
+	<div ng-repeat="post in posts" class="post">
+		<a  href="https://www.reddit.com/{{ post.data.permalink }}" target="_blank">
+			<p>{{ post.data.title }}</p>
+			<img class="preview" ng-src='{{getImg(post.data.thumbnail)}}' alt="I'm broken"/>
+			<p>{{  post.data.author }}</p>
+		</a>
+	</div>
