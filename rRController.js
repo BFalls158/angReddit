@@ -13,4 +13,8 @@ angular.module('app')
 				return src;
 			}
 		}
+
+		$scope.goBack = function() {
+			$location.path('/rSearch')
+		}
 	});

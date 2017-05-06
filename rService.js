@@ -10,7 +10,7 @@ angular.module('app')
 	      	url: 'http://www.reddit.com/r/' + subreddit +'.json',
 	      	params: {limit: '24'}
 	  	  }).then(function(response) {
-	  	  	reddit = response.data;
+	  	  		reddit = response.data;
 	      },function(error){
 	  	  	console.log(error);
 	      });
