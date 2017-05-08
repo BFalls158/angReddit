@@ -1,5 +1,5 @@
 angular.module('app')
-  .factory('rService', function($http) {
+  .factory('rService', function($http, $q) {
 
   	var reddit = {};
 
@@ -10,9 +10,13 @@ angular.module('app')
 	      	url: 'http://www.reddit.com/r/' + subreddit +'.json',
 	      	params: {limit: '24'}
 	  	  }).then(function(response) {
-	  	  		reddit = response.data;
+	  	  		if (response.status > 199 && response.status <300) {
+	  	  			reddit = response.data;
+	  	  		} else {
+	  	  			return $q.reject(response);
+	  	  		}
 	      },function(error){
-	  	  	console.log(error);
+	  	  		return $q.reject(error);
 	      });
 	    return promise;
 	  },

@@ -110,6 +110,9 @@ a:visited, a:link, a:hover {
 	animation: rotateOutNewspaper .5s both ease-in;
 }
 
+select {
+	width: 100px;
+}
 /*Animations*/
 
 /*Scale up*/
